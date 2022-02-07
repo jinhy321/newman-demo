@@ -27,4 +27,6 @@ jobs:
       - name: Start service
         run: yarn start &
       - name: Run API tests
-        run: newman run https://raw.githubusercontent.com/jinhy321/newman-demo/master/assets/postman/newman.postman_collection.json
+        run: |
+          newman run ./assets/postman/newman.postman_collection.json \
+            --env-var host=http://127.0.0.1:3000

@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "NestjsHelloWorld",
+			"name": "HelloWorld",
 			"event": [
 				{
 					"listen": "test",
@@ -28,15 +28,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:3000",
-					"protocol": "http",
+					"raw": "{{host}}/hello",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"{{host}}"
 					],
-					"port": "3000"
+					"path": [
+						"hello"
+					]
 				}
 			},
 			"response": []
