@@ -24,3 +24,7 @@ jobs:
         run: yarn test
       - name: Install Newman
         run: npm i newman -g
+      - name: Start service
+        run: yarn start &
+      - name: Run API tests
+        run: newman run https://raw.githubusercontent.com/jinhy321/newman-demo/master/assets/postman/newman.postman_collection.json
